@@ -1,0 +1,26 @@
+/* *{ */
+/*  */
+/* } */
+
+.mr-5{
+    border: 20px;
+    /* border: 20px; */
+    /* height: fit-content; */
+    padding: 6px;
+    
+}
+
+
+.mr-5:hover{
+    background-color: aliceblue;
+    color: orangered;
+    border-radius: 19px;
+    width: fit-content;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+#instabut{
+    border-radius: 14px;
+}
