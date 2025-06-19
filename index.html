@@ -26,11 +26,12 @@
       <a href="#contactus" class="mr-5 hover:text-pink-900">CONTACT US</a>
       <a href="#aboutus" class="mr-5 hover:text-pink-900">ABOUT US</a>
     </nav>
-    <a href="https://www.instagram.com/prelude_playz?igsh=NGoxNW1ieDdreTNz"><button id="instabut" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-pink-300 rounded text-base mt-4 md:mt-0">INSTAGRAM
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
+<!--     <a href="https://www.instagram.com/prelude_playz?igsh=NGoxNW1ieDdreTNz"><button id="instabut" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-pink-300 rounded text-base mt-4 md:mt-0">INSTAGRAM -->
+<!--       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+<!--         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
-    </button></a>
+    </button></a> -->
+      <input type="text" id="searchInput" placeholder="Search Movies.." title="TYPE CORRECT SPELLING OR  COPY FROM GOOGLE AND PASTE HERE"  class="border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" />
   </div>
 </header>
 
@@ -43,6 +44,27 @@
 
 
 
+const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".p-4");
+
+    cards.forEach(card => {
+      const titleElement = card.querySelector("h2");
+      const title = titleElement ? titleElement.textContent.toLowerCase() : "";
+
+      if (title.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+
+
+    
 
 
 
