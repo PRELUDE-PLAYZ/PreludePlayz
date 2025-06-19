@@ -21,6 +21,15 @@
 html{
     scroll-behavior: smooth;
 }
-#instabut{
-    border-radius: 14px;
+
+#searchInput{
+    background-color: rgb(48, 48, 48);
+    color: white;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 20px;
+}
+#searchInput:hover{
+    background-color: rgb(79, 79, 78);
+    /* text-transform: capitalize; */
 }
